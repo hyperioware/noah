@@ -12,4 +12,7 @@ HARDWARE: Raspberry Pi 4B (4GB) with 64GB SD card, Arduino-based IoT devices, ho
 
 SOFTWARE: Apache 2, PHP, Python, MySQL
 
+LIBRARIES: 
+- JavaScript: React, jQuery
+
 
