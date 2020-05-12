@@ -1,40 +1,40 @@
 PHP API STRUCTURE
 
 USER
-  ID (R/D)
-    FIRST_NAME (R/U)
-    LAST_NAME (R/U)
-    BIRTHDAY (R/U)
-    EMAIL (R/U)
+  ID (R/D)*
+    FIRST_NAME (R/U)*
+    LAST_NAME (R/U)*
+    BIRTHDAY (R/U)*
+    EMAIL (R/U)*
     PHONES (C/R/U/D)
     ADDRESS (C/R/U/D)
     PERMISSIONS (C/R/U/D)
-    DATE_ADDED (R)
+    DATE_ADDED (R)*
 DEVICE
-  ID (R/D)
-    NAME (R/U)
-    TYPE (R/U)
-    IP_ADDRESS (R)
-    MAC_ADDRESS (R)
-    OWNER_ID (R/U)
-    DATE_ADDED (R)
-    STATE (R/U)
+  ID (R/D)*
+    NAME (R/U)*
+    TYPE (R/U)*
+    IP_ADDRESS (R)*
+    MAC_ADDRESS (R)*
+    OWNER_ID (R/U)*
+    DATE_ADDED (R)*
+    STATE (R/U)*
     CURRENT_DATA (R)
-    VISIBILITY (R/U)
+    VISIBILITY (R/U)*
 FILE
-  ID (R/D)
-    NAME (R/U)
-    FILE_TYPE (R/U)
-    CATEGORY (R/U)
-    OWNER_ID (R/U)
-    VISIBILITY (R/U)
-    DATE_ADDED (R)
+  ID (C/R/D)*
+    NAME (R/U)*
+    FILE_TYPE (R/U)*
+    CATEGORY (R/U)*
+    OWNER_ID (R/U)*
+    VISIBILITY (R/U)*
+    DATE_ADDED (R)*
 RESTRICTION
-  ID (R/D)
-  NAME (R/U)
-  TYPE (R/U)
-  OWNER_ID (R/U)
-  DATE_ADDED (R)
-  STATE (R/U)
-  RULE_TEXT (R/U)
+  ID (C/R/D)*
+  NAME (R/U)*
+  TYPE (R/U)*
+  OWNER_ID (R/U)*
+  DATE_ADDED (R)*
+  STATE (R/U)*
+  RULE_TEXT (R/U)*
   DESCRIPTION (C/R/U/D)
