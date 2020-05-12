@@ -1,7 +1,7 @@
 PHP API STRUCTURE
 
-/USER
-  /ID (R/D)
+USER
+  ID (R/D)
     /FIRST_NAME (R/U)
     /LAST_NAME (R/U)
     /BIRTHDAY (R/U)
