@@ -23,6 +23,7 @@ DEVICES
     CURRENT_DATA (R)
     VISIBILITY (R/U)*
     ROOM (C/R/U/D)*
+    STATUS_MESSAGE (C/R/U/D)
 FILES
   ID (C/R/D)*
     NAME (R/U)*
