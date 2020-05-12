@@ -24,7 +24,7 @@ DEVELOPMENT PHASES:
 
 Phase 1: Establish REST and Oauth process, then local web page. Success indicated by successful REST requests and OAuth operation with proper display on the web page.
 
-Phase 2: Establish item/user registration. This can be IoT devices/sensors, mobile devices, etc. Success indicated by successful registration of at least one device and one user.
+Phase 2: Establish item/user registration. This can be IoT devices/sensors, mobile devices, etc. This will also include apps to be used by the Noah hubs. Every app will use OAuth to interact. This will ease data requests across the board, since owners should be able to modify permissions of ANY data-sending/requesting endpoints. All such endpoints will be visible to the owner. Success indicated by successful registration of at least one device and one user.
 
 Phase 3: Establish hub management console within the webpage for users and devices. Success indicated by display of all registered devices and users, regardless of connection status, as well as successful correct behavior changes when permissions/roles are updated.
 
@@ -59,6 +59,8 @@ Phase 17: Limited release. Success indicated by appropriate site/device behavior
 Phase 18: Review status and documentation. Make any adjustments/fixes.
 
 Phase 19: General release to public.
+
+FUTURE CONSIDERATIONS: Users will be used to using other home automation products, such as Google and Amazon devices. It is prudent to extend functionality to these as well so that users can continue using them. The likely integration may involve commands being authenticated at the hub before sending to those services. Those devices may also recieve and transmit data autonomously through their internet connection and managed independently by those companies, and so users need to be aware of that.
 
 
 
