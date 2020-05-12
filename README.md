@@ -14,5 +14,6 @@ SOFTWARE: Apache 2, PHP, Python, MySQL
 
 LIBRARIES: 
 - JavaScript: React, jQuery
+- REST API: Okta
 
 
