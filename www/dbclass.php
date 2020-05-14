@@ -21,5 +21,27 @@ class DBClass{
 
       return $this->connection;
   }
+  public static function createTable($name,$params){
+    
+  }
+  
+  public static function dropTable($name){
+  
+  }
+  
+  public static function updateRecord(){
+  }
+  
+  public static function updateRecords(){
+  }
+  
+  public static function addRecord(){
+  }
+  
+  public static function addRecords(){
+  }
+  
+  public static function deleteRecord(){
+  }
 }
 ?>
