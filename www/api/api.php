@@ -1,24 +1,35 @@
 <?php
-class NoahAPI{
-  public $requester_id = null;
-  public $authorized = 0;
-  public $scope = null;
+class APIRequest{
+  private $pdo;
   
-  public function __construct($requester_id,$authorized,$scope){
-    $this->$requester_id = $requester_id;
-    $this->$authorized = $authorized;
-    $this->$scope = $scope;
+  public function createNode($params){
+    $columns = implode(",",array_keys($params));
+    $values = "";
+    $i = 0;
+    foreach($params as $val){
+      $values[$i] = "'".$val."'";
+      $i++;
+    }
+    $values = implode(",",$values);
+    $query = "INSERT INTO nodes ($columns) VALUES ($values)";
+    $stmt = $this->pdo.prepare($query);
+    $stmt.execute();
+    $stmt = null;
   }
-}
-
-class Users extends NoahAPI{
-  public $id = null;
-  public $date_added = null;
   
-  public static $definition = array(
-    'table' => 'users',
-    'primary_key' => 'id',
-    'fields' => array('first_name','last_name','birthday','email','phones','street address','city','state','zipcode','relationship_to_owner','permissions','date_added')
-    );
+  public function getNode($id,$params){}
+  
+  public function getNodes(){}
+  
+  public function updateNode(){}
+  
+  public function updateNodes(){}
+  
+  public function deleteNode(){}
+  
+  public function deleteNodes(){}
+  
+  public function __construct($pdo){$this->pdo = $pdo;}
+  
 }
 ?>
