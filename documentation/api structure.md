@@ -1,6 +1,6 @@
 PHP API STRUCTURE
 ~~~
-index.php
+api/index.php
 	 ?create={id}&{columns/values}
 	 ?id={id}
 	 ?{fields}&where={criteria}&condition={OR/AND}&order={columns}&sort={asc/desc}
