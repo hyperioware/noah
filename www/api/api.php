@@ -2,6 +2,8 @@
 class APIRequest{
   private $pdo;
   
+  public function validateData(){}
+  
   public function createNode($params){//Associative array such as ('Column1'=>'Value')
     $columns = implode(",",array_keys($params));
     $values = "";
@@ -126,4 +128,31 @@ class APIRequest{
   public function __construct($pdo){$this->pdo = $pdo;}
   
 }
+
+class User extends APIRequest{
+  public function validateData($data){
+  }
+}
+
+class File extends APIRequest{
+  public function validateData($data){
+  }
+}
+
+class Device extends APIRequest{
+  public function validateData($data){
+  }
+}
+
+class Restriction extends APIRequest{
+  public function validateData($data){
+  }
+}
+
+class Post extends APIRequest{
+  public function validateData($data){
+  }
+}
+
+
 ?>
