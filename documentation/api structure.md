@@ -1,11 +1,11 @@
 PHP API STRUCTURE
 ~~~
-api/index.php
-	     ?{nodetype}&{id}
-	     ?{nodetype}&{id}&{pagename}
-	     ?{nodetype}&{id}&update&{columns/values}
-	     ?{nodetype}&{id}&delete
-	     ?{nodetype}&create&{columns/values}
-	     ?{nodetype}&search&{fields}&where={criteria}&{OR/AND}&order={columns}&{asc/desc}
-	     ?{nodetype}&update&{columns/values}&where={criteria}&{OR/AND}
+	api/index.php
+GET		     ?{nodetype}&id={id}
+GET		     ?{nodetype}&id={id}&{pagename}
+PUT		     ?{nodetype}&id={id}&{columns/values}
+DELETE		     ?{nodetype}&id={id}
+POST		     ?{nodetype}&{columns/values}
+GET		     ?{nodetype}&search&{fields}&where={criteria}&{OR/AND}&order={columns}&{asc/desc}
+PUT		     ?{nodetype}&update&{columns/values}&where={criteria}&{OR/AND}
 ~~~
