@@ -1,3 +1,32 @@
 <?php
-
+require_once "dbclass.php";
+$nodeTable = array(
+  array('column'=>'id','autoincrement'=>false,'primarykey'=>true,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>11, 'default'=>null),
+  array('column'=>'Owner_id','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>11, 'default'=>null),
+  array('column'=>'Node_Type','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Name','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Body','autoincrement'=>false,'primarykey'=>false,'index'=>false,'unsigned'=>true, 'datatype'=>'TEXT','size'=>null, 'default'=>null),
+  array('column'=>'Visibility','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'BIT','size'=>null, 'default'=>null),
+  array('column'=>'Node_State','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'BOOL','size'=>null, 'default'=>null),
+  array('column'=>'Date_added','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'TIMESTAMP','size'=>null, 'default'=>'CURRENT_TIMESTAMP'),
+  array('column'=>'Description','autoincrement'=>false,'primarykey'=>false,'index'=>false,'unsigned'=>true, 'datatype'=>'TEXT','size'=>null, 'default'=>null),
+  array('column'=>'IP_Address','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>20, 'default'=>null),
+  array('column'=>'MAC_Address','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'First_Name','autoincrement'=>false,'primarykey'=>false,'index'=>false,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Last_Name','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Street','autoincrement'=>false,'primarykey'=>false,'index'=>false,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'City','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'State','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Zipcode','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Country','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Email','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Password','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Phones','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>100, 'default'=>null),
+  array('column'=>'Relationship_to_Master_Account','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Scope','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Birthday','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'DATE','size'=>null, 'default'=>null),
+  array('column'=>'URL','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'Connection','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>50, 'default'=>null),
+  array('column'=>'App_ID','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'VARCHAR','size'=>11, 'default'=>null),
+);
 ?>
