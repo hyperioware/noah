@@ -68,4 +68,14 @@ $scopesTable = array(
   array('column'=>'Node_Connection','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'BOOL','size'=>null, 'default'=>false),
   array('column'=>'Node_App_ID','autoincrement'=>false,'primarykey'=>false,'index'=>true,'unsigned'=>true, 'datatype'=>'BOOL','size'=>null, 'default'=>false)
 );
+
+$apiDB = new DBClass();
+echo "Starting setup...";
+$response = $apiDB->createTable($nodeTable);
+echo $response;
+$response = $apiDB->createTable($nodeTypesTable);
+echo $response;
+$response = $apiDB->createTable($scopesTable);
+echo $response;
+echo "Setup script complete.";
 ?>
