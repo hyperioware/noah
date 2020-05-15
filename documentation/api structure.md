@@ -27,3 +27,5 @@ GET		     /users/first_name,city/city=detroit,city=fenton/OR/10 //Gets all user 
 GET		     /users/photos/city=detroit/50 //Gets photos for all users from detroit, and limit to 50 per page
 PUT		     /users/city=detroit/city=detriot //Updates all users from "detriot" with city name of "detroit"
 ~~~
+
+Reference: http://coreymaynard.com/blog/creating-a-restful-api-with-php/
