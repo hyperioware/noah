@@ -21,27 +21,31 @@ class DBClass{
 
       return $this->connection;
   }
-  public static function createTable($name,$params){
+  public function createTable($name,$params){
     
   }
   
-  public static function dropTable($name){
+  public function dropTable($name){
   
   }
   
-  public static function updateRecord(){
+  public function updateRecord(){
   }
   
-  public static function updateRecords(){
+  public function updateRecords(){
   }
   
-  public static function addRecord(){
+  public function addRecord(){
   }
   
-  public static function addRecords(){
+  public function addRecords(){
   }
   
-  public static function deleteRecord(){
+  public function deleteRecord(){
   }
+  
+  public function getNodeTypes(){}
+  
+  public function getScopes(){}
 }
 ?>
