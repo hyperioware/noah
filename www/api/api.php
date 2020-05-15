@@ -1,10 +1,9 @@
 <?php
-class APIRequest{
+abstract class API{
   private $pdo;
+  protected $apiDB;
   
-  public function validateData(){}
-  
-  public function createNode($params){//Associative array such as ('Column1'=>'Value')
+  protected function createNode($params){//Associative array such as ('Column1'=>'Value')
     $columns = implode(",",array_keys($params));
     $values = "";
     $i = 0;
@@ -24,7 +23,7 @@ class APIRequest{
     }
   }
   
-  public function getNode($id,$fields){//Get a node solely based on id. This assumes that most uses will not require the entire record, so if the entire record is needed, all fields will be needed.
+  protected function getNode($id,$fields){//Get a node solely based on id. This assumes that most uses will not require the entire record, so if the entire record is needed, all fields will be needed.
     $fields = implode(",",$fields);
     $query = "SELECT $fields FROM nodes WHERE id='$id'";
     try{
@@ -38,7 +37,7 @@ class APIRequest{
     }
   }
   
-  public function getNodes($fields,$params,$condition,$orderby){
+  protected function getNodes($fields,$params,$condition,$orderby){
   /*
   Get select fields from all nodes based on criteria in the params arg. The condition arg applies the AND or OR across all criteria.
   Include ORDER BY column(s) with the ASC/DESC requirement in a string as such: "ColumnName ASC". WHERE is required, but ORDER BY is not.
@@ -65,7 +64,7 @@ class APIRequest{
     }
   }
   
-  public function updateNode($id,$params){
+  protected function updateNode($id,$params){
     $columns = array_keys($params);
     $set = "";
     $i = 0;
@@ -85,7 +84,7 @@ class APIRequest{
     }
   }
   
-  public function updateNodes($params,$where,$condition){
+  protected function updateNodes($params,$where,$condition){
     $columns = array_keys($params);
     $set = "";
     $i = 0;
@@ -113,7 +112,7 @@ class APIRequest{
     }
   }
   
-  public function deleteNode($id){//Delete single record by id only.
+  protected function deleteNode($id){//Delete single record by id only.
     $query = "DELETE FROM nodes WHERE id='$id'";
     try{
       $stmt = $this->pdo.prepare($query);
@@ -125,34 +124,33 @@ class APIRequest{
     }
   }
    
-  public function __construct($pdo){$this->pdo = $pdo;}
+  public function __construct($pdo){
+    $this->pdo = $pdo;
+    $this->apiDB = new DBClass();
+  }
   
 }
 
-class User extends APIRequest{
-  public function validateData($data){
+class APIRequest extends API{
+  public static const GET = 0;
+  public static const POST = 1;
+  public static const PUT = 2;
+  public static const DELETE = 3;
+  
+  private $nodeTypes = $this->apiDB->getNodeTypes();//Returned as array
+  
+  public function validateData($nodeType,$method,$data){
+    switch($method){
+      case GET:
+      case POST:
+      case PUT:
+      case DELETE:
+    }
+  }
+  
+  public function __construct(){
+    parent::__construct();
   }
 }
-
-class File extends APIRequest{
-  public function validateData($data){
-  }
-}
-
-class Device extends APIRequest{
-  public function validateData($data){
-  }
-}
-
-class Restriction extends APIRequest{
-  public function validateData($data){
-  }
-}
-
-class Post extends APIRequest{
-  public function validateData($data){
-  }
-}
-
 
 ?>
